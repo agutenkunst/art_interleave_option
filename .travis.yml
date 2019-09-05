@@ -1,0 +1,20 @@
+# Travis CI instructions
+
+sudo: required
+dist: trusty
+language: generic
+
+notifications:
+  email:
+    on_failure: always
+    recipients:
+      - a.gutenkunst@pilz.de
+env:
+  global:
+    - ROS_DISTRO="melodic"
+  matrix:
+    - ROS_REPO=ros
+install:
+  - git clone --depth=1 --branch master https://github.com/ros-industrial/industrial_ci.git .industrial_ci
+script:
+  - .industrial_ci/travis.sh
