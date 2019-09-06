@@ -13,6 +13,7 @@ env:
   global:
     - ROS_DISTRO="melodic"
     - INTERLEAVE_OUTPUT_TESTS=true
+    - BUILDER="colcon"
   matrix:
     - ROS_REPO=ros
 install:
