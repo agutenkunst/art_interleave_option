@@ -12,6 +12,7 @@ notifications:
 env:
   global:
     - ROS_DISTRO="melodic"
+    - BUILDER="colcon"
   matrix:
     - ROS_REPO=ros
 install:
