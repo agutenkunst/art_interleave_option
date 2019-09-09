@@ -17,4 +17,4 @@ env:
 install:
   - git clone --depth=1 --branch master https://github.com/ros-industrial/industrial_ci.git .industrial_ci
 script:
-  - .industrial_ci/travis.sh
+  - timeout --preserve-status 10m .industrial_ci/travis.sh
